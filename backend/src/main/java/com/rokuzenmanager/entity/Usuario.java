@@ -22,9 +22,5 @@ public class Usuario {
     private String usuario;
 
     @Column(nullable = false)
-    private String senha;
-
-    // Campo reservado para futuras regras de autorização (roles)
-    // private String role;
-    
+    private String senha;  
 }

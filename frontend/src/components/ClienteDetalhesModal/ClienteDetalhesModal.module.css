@@ -1,0 +1,143 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 80;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(680px, calc(100vw - 28px));
+
+  background: #fff;
+  border-radius: 18px;
+  z-index: 90;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  font-family: "Poppins";
+  padding: 15px;
+}
+
+.header {
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2f3a2c;
+  font-family: "Aleo";
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.body {
+  padding: 16px 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 16px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 12px;
+  color: #777;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 14px;
+  color: #333;
+}
+
+.valueStrong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+.footer {
+  padding: 14px 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.secondaryBtn {
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: "Poppins";
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.primaryBtn {
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-family: "Poppins";
+  cursor: pointer;
+  background: #4a5d4a;
+  color: #fff;
+  border: none;
+}
+
+.primaryBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.obsBox {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.obsText {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

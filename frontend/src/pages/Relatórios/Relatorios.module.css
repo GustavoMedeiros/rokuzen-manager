@@ -1,0 +1,262 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #4F5D4A;
+  font-family: 'Aleo';
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: #777;
+  font-size: 15px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  margin-top: 20px;
+}
+
+.filtersRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: end;
+  gap: 16px;
+}
+
+.field label {
+  display: block;
+  font-family: 'Poppins';
+  font-size: 13px;
+  color: #4b4b4b;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.inputWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.inputWithIcon input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.icon {
+  opacity: 0.75;
+}
+
+.primaryBtnWide {
+  background: #4a5d4a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+  font-family: 'Poppins';
+  font-weight: 500;
+  width: 100%;
+  height: 44px;
+}
+
+.primaryBtnWide:active {
+  transform: translateY(2px) scale(0.98);
+}
+
+.primaryBtnWide:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.kpiCard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.kpiLabel {
+  display: block;
+  color: #777;
+  font-family: 'Poppins';
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.kpiValue {
+  font-family: 'Aleo';
+  font-size: 34px;
+  font-weight: 700;
+  color: #111;
+}
+
+.chartsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.chartCard {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.chartTitle {
+  margin: 0 0 10px;
+  font-family: 'Aleo';
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ---- Ocupação ---- */
+.pieArea {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  padding: 8px 0 14px;
+}
+
+.pieCanvas {
+  width: 260px;
+  height: 260px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pieNames {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: 'Poppins';
+  color: #6b6b6b;
+  text-align: center;
+}
+
+.pieName {
+  text-align: center;
+}
+
+/* Legenda (igual print) */
+.legend {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.legendRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: rgba(79, 93, 74, 0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-family: 'Poppins';
+}
+
+.legendLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legendName {
+  font-weight: 600;
+  color: #2e2e2e;
+}
+
+.legendRight {
+  color: #555;
+  font-size: 14px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* ---- Faturamento diário ---- */
+.barCanvas {
+  height: 320px;
+  border-radius: 14px;
+  border: 1px dashed rgba(0,0,0,0.16);
+  padding: 12px;
+}
+
+.empty {
+  padding: 18px;
+  color: #777;
+  font-family: 'Poppins';
+}
+
+.error {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(179, 38, 30, 0.08);
+  color: #b3261e;
+  border: 1px solid rgba(179, 38, 30, 0.2);
+  font-family: 'Poppins';
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .filtersRow {
+    grid-template-columns: 1fr;
+  }
+
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .chartsGrid {
+    grid-template-columns: 1fr;
+  }
+}

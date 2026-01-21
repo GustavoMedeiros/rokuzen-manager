@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Login.module.css";
-import { useAuth } from "../../auth/useAuth";
+import useAuth from "../../auth/useAuth";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -46,7 +46,7 @@ export default function Login() {
       <div className={styles.left} />
       <div className={styles.right}>
         <div className={styles.card}>
-          <h1 className={styles.title}>Rokuzen</h1>
+          <h1 className={styles.title}>Velora</h1>
           <p className={styles.subtitle}>Sistema de Agendamento de Massagens</p>
 
           <form className={styles.form} onSubmit={handleSubmit}>

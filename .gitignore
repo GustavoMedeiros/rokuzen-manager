@@ -25,3 +25,10 @@ dist/
 
 # OS
 .DS_Store
+
+# secrets / env
+.env
+.env.*
+*.env
+application-dev-local.properties
+application-prod-local.properties

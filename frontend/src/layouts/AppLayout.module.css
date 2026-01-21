@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+  background: #f7f3ee;
+}
+
+.main {
+  padding-top: 86px;
+}
+
+.container {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 34px 24px;
+}
+
+/* Responsivo */
+@media (max-width: 960px) {
+  .main {
+    padding-top: 76px;
+  }
+
+  .container {
+    padding: 22px 16px;
+  }
+}

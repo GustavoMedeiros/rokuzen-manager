@@ -5,6 +5,11 @@ import com.rokuzenmanager.dto.LoginResponseDTO;
 import com.rokuzenmanager.entity.Usuario;
 import com.rokuzenmanager.config.security.JwtService;
 import com.rokuzenmanager.service.UsuarioService;
+
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.security.core.Authentication;
@@ -23,6 +28,11 @@ public class AuthController {
         this.jwtService = jwtService;
     }
 
+    @Operation(summary = "Login do sistema")
+    @ApiResponses({
+        @ApiResponse(responseCode = "200", description = "Login realizado com sucesso"),
+        @ApiResponse(responseCode = "401", description = "Credenciais inválidas")
+    })
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDTO> login(
             @RequestBody LoginRequestDTO request
@@ -38,8 +48,8 @@ public class AuthController {
     }
 
     @GetMapping("/perfil")
-    public Usuario perfil() {
+    public Object perfil() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        return (Usuario) auth.getPrincipal();
+        return auth == null ? null : auth.getPrincipal();
     }
 }
